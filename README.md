@@ -3,7 +3,7 @@
 ##
 ### Supplementary Data for:
 
-### Whole-genome resequencing of an acute gamma-mutagenised Oryza sativa:<br> a resource for discovering the landscape of genomic mutations underpinning bacterial leaf blight resistance<br>
+### Whole-genome resequencing of an acute gamma-mutagenised *Oryza sativa*:<br> a resource for discovering the landscape of genomic mutations underpinning bacterial leaf blight resistance<br>
 ##
 
 ##### *Siti Amira Adilah Kamarudin<sup>1</sup>, Nor’Aishah Hasan<sup>1</sup>, Faiz Ahmad<sup>2</sup>*
