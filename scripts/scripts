@@ -8,9 +8,9 @@ mkdir -p rice_wgrs/30_vcf
 
 
 # Data Accession from SRA
-1. prefetch SRR22952097 -O /mnt/d/rice_wgrs/00_fastq
-2. fasterq-dump /mnt/d/rice_wgrs/00_fastq/SRR22952097/SRR22952097.sra -O /mnt/d/rice_wgrs/00_fastq
-3. mv /mnt/d/rice_wgrs/00_fastq/SRR22952097.fastq /mnt/d/rice_wgrs/00_fastq/ML1.fastq
+1. prefetch  SRR37260596 -O /mnt/d/rice_wgrs/00_fastq
+2. fasterq-dump /mnt/d/rice_wgrs/00_fastq/SRR37260596/SRR37260596.sra -O /mnt/d/rice_wgrs/00_fastq
+3. mv /mnt/d/rice_wgrs/00_fastq/SRR37260596.fastq /mnt/d/rice_wgrs/00_fastq/ML1.fastq
 4. gzip /mnt/d/rice_wgrs/00_fastq/ML-1_R1.fastq
 
 
