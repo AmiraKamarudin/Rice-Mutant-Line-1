@@ -76,7 +76,6 @@ samtools view -@ 4 -b 20_bam/ML-1.sam -o 20_bam/ML-1_unsorted.bam
 
 
 # Variant calling
-# variant calling of wild-type and mutant
 bcftools mpileup \
   -a AD,ADF,ADR,DP \
   -q 30 -Q 20 \
