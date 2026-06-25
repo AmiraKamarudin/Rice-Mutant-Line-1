@@ -41,18 +41,12 @@ fastqc -t 8 \
   -o 02_fastqc
 
 
-# Download reference FASTA
-wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/034/140/825/GCF_034140825.1_ASM3414082v1/GCF_034140825.1_ASM3414082v1_genomic.fna.gz   
+#  Reference genome accesion from NCBI
+1. wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/034/140/825/GCF_034140825.1_ASM3414082v1/GCF_034140825.1_ASM3414082v1_genomic.fna.gz   
+2. wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/034/140/825/GCF_034140825.1_ASM3414082v1/GCF_034140825.1_ASM3414082v1_genomic.gff.gz
+3. mv GCF_034140825.1_ASM3414082v1_genomic.fna.gz 10_ref/Nipponbare.fna.gz
+4. mv GCF_034140825.1_ASM3414082v1_genomic.gff.gz 10_ref/Nipponbare.gff.gz
+5. gunzip 10_ref/Nipponbare.fna.gz
+6. gunzip 10_ref/Nipponbare.gff.gz
 
-# Download reference GFF
-wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/034/140/825/GCF_034140825.1_ASM3414082v1/GCF_034140825.1_ASM3414082v1_genomic.gff.gz
 
-# Rename reference FASTA
-mv GCF_034140825.1_ASM3414082v1_genomic.fna.gz 10_ref/Nipponbare.fna.gz
-
-# Rename reference GFF
-mv GCF_034140825.1_ASM3414082v1_genomic.gff.gz 10_ref/Nipponbare.gff.gz
-
-# decompress reference FASTA
-gunzip 10_ref/Nipponbare.fna.gz
-gunzip 10_ref/Nipponbare.gff.gz
