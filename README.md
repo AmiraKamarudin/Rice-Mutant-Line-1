@@ -10,7 +10,7 @@
 
 </div>
 
-1. Faculty of Applied Sciences, Universiti Teknologi MARA, Cawangan Negeri Sembilan, Kampus Kuala Pilah, 72000 Negeri Sembilan, Malaysia
+1. Faculty of Applied Sciences, Universiti Teknologi MARA (UiTM), 72000 Negeri Sembilan, Malaysia
 3. Agrotechnology and Biosciences Division, Malaysian Nuclear Agency, 43000 Kajang, Selangor, Malaysia 
 
 ## Raw Data
