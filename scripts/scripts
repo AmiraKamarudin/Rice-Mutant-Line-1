@@ -56,8 +56,10 @@ bwa mem -t 16 10_ref/Nipponbare.fna \
   01_trimmed_fastq/ML-1_R2_paired.fq.gz \
   > 20_bam/ML-1.sam
 
+
 # SAM to BAM conversion
 samtools view -@ 4 -b 20_bam/ML-1.sam -o 20_bam/ML-1_unsorted.bam
+
 
 # Read deduplication
 1. samtools fixmate -m \
@@ -69,4 +71,27 @@ samtools view -@ 4 -b 20_bam/ML-1.sam -o 20_bam/ML-1_unsorted.bam
 3. samtools markdup \
   20_bam/ML-1_fixmate.sorted.bam \
   20_bam/ML-1_markdup.bam
+4. rm *_collated.bam && rm *_fixmate.bam && rm *_fixmate.sorted.bam
+5. samtools index 20_bam/ML-1_markdup.bam
+
+
+# Variant calling
+# variant calling of wild-type and mutant
+bcftools mpileup \
+  -a AD,ADF,ADR,DP \
+  -q 30 -Q 20 \
+  -f 10_ref/Nipponbare.fna \
+  20_bam/MR297_markdup.bam \
+  20_bam/ML-1_markdup.bam | \
+bcftools call -vm -f GQ,GP -O u | \
+bcftools filter -i 'INFO/MQ>=40' -Oz -o 30_vcf/MR297_ML-1.vcf.gz
+
+
+
+
+
+
+
+
+
 
