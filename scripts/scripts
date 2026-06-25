@@ -50,3 +50,23 @@ fastqc -t 8 \
 6. gunzip 10_ref/Nipponbare.gff.gz
 
 
+# Read Alignment to reference genome
+bwa mem -t 16 10_ref/Nipponbare.fna \
+  01_trimmed_fastq/ML-1_R1_paired.fq.gz \
+  01_trimmed_fastq/ML-1_R2_paired.fq.gz \
+  > 20_bam/ML-1.sam
+
+# SAM to BAM conversion
+samtools view -@ 4 -b 20_bam/ML-1.sam -o 20_bam/ML-1_unsorted.bam
+
+# Read deduplication
+1. samtools fixmate -m \
+  20_bam/ML-1_collated.bam \
+  20_bam/ML-1_fixmate.bam
+2. samtools sort -@ 2 -m 512M -T /root/tmp/ML-1_sort \
+  -o 20_bam/ML-1_fixmate.sorted.bam \
+  20_bam/ML-1_fixmate.bam
+3. samtools markdup \
+  20_bam/ML-1_fixmate.sorted.bam \
+  20_bam/ML-1_markdup.bam
+
