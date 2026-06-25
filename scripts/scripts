@@ -1,0 +1,58 @@
+# Create parent directory & sub directories 
+mkdir -p rice_wgrs/00_fastq
+mkdir -p rice_wgrs/01_trimmed_fastq
+mkdir -p rice_wgrs/02_fastqc
+mkdir -p rice_wgrs/10_ref
+mkdir -p rice_wgrs/20_bam
+mkdir -p rice_wgrs/30_vcf
+
+
+# Data Accession from SRA
+1. prefetch SRR22952097 -O /mnt/d/rice_wgrs/00_fastq
+2. fasterq-dump /mnt/d/rice_wgrs/00_fastq/SRR22952097/SRR22952097.sra -O /mnt/d/rice_wgrs/00_fastq
+3. mv /mnt/d/rice_wgrs/00_fastq/SRR22952097.fastq /mnt/d/rice_wgrs/00_fastq/ML1.fastq
+4. gzip /mnt/d/rice_wgrs/00_fastq/ML-1_R1.fastq
+
+
+# Pre-trimming Quality control
+fastqc -t 8 \
+  00_fastq/ML-1_R1.fastq.gz \
+  00_fastq/ML-1_R2.fastq.gz \
+  -o 02_fastqc
+
+
+# Read trimming
+trimmomatic PE -threads 8 \
+  00_fastq/ML-1_R1.fastq.gz 00_fastq/ML-1_R2.fastq.gz \
+  01_trimmed_fastq/ML-1_R1_paired.fq.gz 01_trimmed_fastq/ML-1_R1_unpaired.fq.gz \
+  01_trimmed_fastq/ML-1_R2_paired.fq.gz 01_trimmed_fastq/ML-1_R2_unpaired.fq.gz \
+  ILLUMINACLIP:$CONDA_PREFIX/share/trimmomatic/adapters/TruSeq3-PE-2.fa:2:30:10 \
+  LEADING:3 TRAILING:3 \
+  SLIDINGWINDOW:4:15 \
+  MINLEN:75
+
+
+# Post-trimming Quality control
+fastqc -t 8 \
+  01_trimmed_fastq/ML-1_R1_paired.fq.gz \
+  01_trimmed_fastq/ML-1_R2_paired.fq.gz \
+  01_trimmed_fastq/ML-1_R1_unpaired.fq.gz \
+  01_trimmed_fastq/ML-1_R2_unpaired.fq.gz \
+  -o 02_fastqc
+
+
+# Download reference FASTA
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/034/140/825/GCF_034140825.1_ASM3414082v1/GCF_034140825.1_ASM3414082v1_genomic.fna.gz   
+
+# Download reference GFF
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/034/140/825/GCF_034140825.1_ASM3414082v1/GCF_034140825.1_ASM3414082v1_genomic.gff.gz
+
+# Rename reference FASTA
+mv GCF_034140825.1_ASM3414082v1_genomic.fna.gz 10_ref/Nipponbare.fna.gz
+
+# Rename reference GFF
+mv GCF_034140825.1_ASM3414082v1_genomic.gff.gz 10_ref/Nipponbare.gff.gz
+
+# decompress reference FASTA
+gunzip 10_ref/Nipponbare.fna.gz
+gunzip 10_ref/Nipponbare.gff.gz
