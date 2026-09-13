@@ -2,16 +2,6 @@
 ## Supplementary Data
 This repository contains the supplementary materials (see [data](https://github.com/AmiraKamarudin/Rice-Mutant-Line-1/tree/main/data)) and Bash scripts (see [scripts](https://github.com/AmiraKamarudin/Rice-Mutant-Line-1/tree/main/scripts)) used to analyse whole-genome sequencing data from a Malaysian mutant rice. All analyses were run on Windows Subsystem for Linux (WSL 2). WSL is a Linux environment on the Windows machine that runs Ubuntu 24.04.3 LTS. 
 
-## For Pipeline Support
-Contact us: [amira.adilah13@gmail.com](mailto:amira.adilah13@gmail.com)
-
-### Authors:
-Siti Amira Adilah Kamarudin [amira.adilah13@gmail.com](mailto:amira.adilah13@gmail.com)\
-Aishah Hasan [aishahnh@uitm.edu.my](aishahnh@uitm.edu.my)\
-Faiz Ahmad [faiz@nm.gov.my](faiz@nm.gov.my)\
-Hamimah Zainal Abidin [nurhamimah@uitm.edu.my](nurhamimah@uitm.edu.my)
-
-
 ## Citation
 **Kamarudin, S. A. A.**, Hasan, N., Faiz, A., Zainal Abidin, N. (2026). Whole-genome resequencing of an acute gamma-mutagenised *Oryza sativa*: a resource for discovering the landscape of genomic variants related to bacterial leaf blight resistance. *Data in Brief*.
 
@@ -30,3 +20,12 @@ Paired-end whole-genome sequencing data obtained from Illumina NovaSeq 6000. The
 | samtools    | 1.19.2      | Danecek, P., Bonfield, J. K., Liddle, J., Marshall, J., Ohan, V., Pollard, M. O., Whitwham, A., Keane, T., McCarthy, S. A., Davies, R. M. and Li, H. (2021). Twelve years of SAMtools and BCFtools. GigaScience, 10(2), giab008. https://doi.org/10.1093/gigascience/giab008|
 | bcftools    | 1.19        | Danecek, P., Bonfield, J. K., Liddle, J., Marshall, J., Ohan, V., Pollard, M. O., Whitwham, A., Keane, T., McCarthy, S. A., Davies, R. M. and Li, H. (2021). Twelve years of SAMtools and BCFtools. GigaScience, 10(2), giab008. https://doi.org/10.1093/gigascience/giab008|
 | SnpEff      | 5.2.1       | Cingolani, P., Platts, A., Wang, le L., Coon, M., Nguyen, T., Wang, L., Land, S. J., Lu, X., Ruden, D. M. (2012). A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118. Fly (Austin), 6(2):80-92. PMID: 22728672|
+
+## For Pipeline Support
+Contact us: [amira.adilah13@gmail.com](mailto:amira.adilah13@gmail.com)
+
+### Authors:
+Siti Amira Adilah Kamarudin [amira.adilah13@gmail.com](mailto:amira.adilah13@gmail.com)\
+Aishah Hasan [aishahnh@uitm.edu.my](aishahnh@uitm.edu.my)\
+Faiz Ahmad [faiz@nm.gov.my](faiz@nm.gov.my)\
+Hamimah Zainal Abidin [nurhamimah@uitm.edu.my](nurhamimah@uitm.edu.my)
