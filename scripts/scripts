@@ -7,12 +7,13 @@ mkdir -p rice_wgrs/20_bam
 mkdir -p rice_wgrs/30_vcf
 
 
-# Data Accession from SRA
+# ML-1 Data Accession from SRA
 1. prefetch SRR37260596 -O /mnt/d/rice_wgrs/00_fastq
 2. fasterq-dump /mnt/d/rice_wgrs/00_fastq/SRR37260596/SRR37260596.sra -O /mnt/d/rice_wgrs/00_fastq
 3. mv /mnt/d/rice_wgrs/00_fastq/SRR37260596.fastq /mnt/d/rice_wgrs/00_fastq/ML1.fastq
-4. gzip /mnt/d/rice_wgrs/00_fastq/ML-1_R1.fastq
+4. gzip /mnt/d/rice_wgrs/00_fastq/ML-1_R1.fastq /mnt/d/rice_wgrs/00_fastq/ML-1_R2.fastq
 
+# MR297 Data Accession from ENA
 
 # Pre-trimming Quality control
 fastqc -t 8 \
@@ -63,7 +64,7 @@ samtools view -@ 4 -b 20_bam/ML-1.sam -o 20_bam/ML-1_unsorted.bam
 
 # Read deduplication
 1. samtools fixmate -m \
-  20_bam/ML-1_collated.bam \
+  20_bam/ML-1_unsorted.bam \
   20_bam/ML-1_fixmate.bam
 2. samtools sort -@ 2 -m 512M -T /root/tmp/ML-1_sort \
   -o 20_bam/ML-1_fixmate.sorted.bam \
