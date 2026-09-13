@@ -2,6 +2,16 @@
 ## Supplementary Data
 This repository contains the supplementary materials (see [data](https://github.com/AmiraKamarudin/Rice-Mutant-Line-1/tree/main/data)) and Bash scripts (see [scripts](https://github.com/AmiraKamarudin/Rice-Mutant-Line-1/tree/main/scripts)) used to analyse whole-genome sequencing data from a Malaysian mutant rice. All analyses were run on Windows Subsystem for Linux (WSL 2). WSL is a Linux environment on the Windows machine that runs Ubuntu 24.04.3 LTS. 
 
+## For Pipeline Support
+Contact us: [amira.adilah13@gmail.com](mailto:amira.adilah13@gmail.com)
+
+### Authors:
+Siti Amira Adilah Kamarudin [amira.adilah13@gmail.com](mailto:amira.adilah13@gmail.com)\
+Aishah Hasan [aishahnh@uitm.edu.my](aishahnh@uitm.edu.my)\
+Faiz Ahmad [faiz@nm.gov.my](faiz@nm.gov.my)\
+Hamimah Zainal Abidin [nurhamimah@uitm.edu.my](nurhamimah@uitm.edu.my)
+
+
 ## Citation
 **Kamarudin, S. A. A.**, Hasan, N., Faiz, A., Zainal Abidin, N. (2026). Whole-genome resequencing of an acute gamma-mutagenised *Oryza sativa*: a resource for discovering the landscape of genomic variants related to bacterial leaf blight resistance. *Data in Brief*.
 
