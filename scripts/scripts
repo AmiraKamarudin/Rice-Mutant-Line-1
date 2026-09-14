@@ -77,16 +77,12 @@ samtools view -@ 4 -b 20_bam/ML-1.sam -o 20_bam/ML-1_unsorted.bam
 
 # Variant calling
 bcftools mpileup \
-  -a AD,ADF,ADR,DP \
+  -a AD,DP \
   -q 30 -Q 20 \
   -f 10_ref/Nipponbare.fna \
-  20_bam/MR297_markdup.bam \
   20_bam/ML-1_markdup.bam | \
-bcftools call -vm -f GQ,GP -O u | \
-bcftools filter -i 'INFO/MQ>=40' -Oz -o 30_vcf/MR297_ML-1.vcf.gz
-
-
-
+bcftools call -vm -a GQ,GP -O u | \
+bcftools filter -i 'QUAL < 40 || DP < 10' -Oz -o 30_vcf/ML-1.vcf.gz
 
 
 
