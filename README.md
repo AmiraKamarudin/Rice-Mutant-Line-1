@@ -3,7 +3,7 @@
 This repository contains the supplementary materials (see [data](https://github.com/AmiraKamarudin/Rice-Mutant-Line-1/tree/main/data)) and Bash scripts (see [scripts](https://github.com/AmiraKamarudin/Rice-Mutant-Line-1/tree/main/scripts)) used to analyse whole-genome sequencing data from a Malaysian mutant rice. The supplemented data files consist of BAM and VCF outputs, FastQC quality report and SnpEff annotation summary.  All analyses were run on Windows Subsystem for Linux (WSL 2). WSL is a Linux environment on the Windows machine that runs Ubuntu 24.04.3 LTS. 
 
 ## Citation
-**Kamarudin, S. A. A.**, Hasan, N., Faiz, A., Zainal Abidin, N. (2026). Whole-genome resequencing of an acute gamma-mutagenised *Oryza sativa*: a resource for discovering the landscape of genomic variants related to bacterial leaf blight resistance. *Data in Brief*.
+**Kamarudin, S. A. A.**, Hasan, N., Faiz, A., Zainal Abidin, N. (2026). Whole-genome resequencing of an acute gamma-mutagenised *Oryza sativa*: a resource for discovering the landscape of genomic variants related to bacterial leaf blight resistance. *Data in Brief, 69 (113323)*. https://doi.org/10.1016/j.dib.2026.113323
 
 ## Raw Data
 The raw reads are publicly available at the NCBI Sequence Read Archive repository under the accession number [SRR37260596](https://www.ncbi.nlm.nih.gov/sra/?term=SRR37260596).
