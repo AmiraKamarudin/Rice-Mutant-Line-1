@@ -25,7 +25,7 @@ Paired-end whole-genome sequencing data obtained from Illumina NovaSeq 6000. The
 Contact us: [amira.adilah13@gmail.com](mailto:amira.adilah13@gmail.com)
 
 ### Authors:
-Siti Amira Adilah Kamarudin [amira.adilah13@gmail.com](mailto:amira.adilah13@gmail.com)\
+Siti Amira Adilah Kamarudin [2023341983@student.uitm.edu.my](mailto:2023341983@student.uitm.edu.my)\
 Aishah Hasan [aishahnh@uitm.edu.my](aishahnh@uitm.edu.my)\
 Faiz Ahmad [faiz@nm.gov.my](faiz@nm.gov.my)\
 Hamimah Zainal Abidin [nurhamimah@uitm.edu.my](nurhamimah@uitm.edu.my)
